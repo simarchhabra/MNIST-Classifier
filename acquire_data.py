@@ -45,6 +45,9 @@ def get_data():
     return (training_data, testing_data)
 
 def vectorize(y):
+    """
+    Vectorizes label data to account for NN design
+    """
     expected_output = np.zeros([10,1])
     expected_output[y] = float(1)
     return expected_output

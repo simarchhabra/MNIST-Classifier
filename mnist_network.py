@@ -56,7 +56,8 @@ class Network:
     def update_network(self, mini_batch, learning_rate, regularization_parameter, n):
         """
         Updates weights and biases after complection of each batch. 
-        Backpropagation called in this method. 
+        Backpropagation called in this method. N is the length of training data
+        and is used to aid in weight decay.
         """        
 
         b_grad_sum = [np.zeros(b.shape) for b in self.biases]
