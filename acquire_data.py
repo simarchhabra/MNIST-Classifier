@@ -17,7 +17,7 @@ def get_data():
     with open(ftrain_images, "rb") as train_img:
         magic_num, train_num, rows, cols = struct.unpack(">iiii", train_img.read(16))
         training_images = np.fromfile(train_img,
-                dtype=np.uint8).reshape(train_num, rows*cols,1)
+                dtype=np.uint8).reshape(train_num, rows, cols)
 
     with open(ftrain_labels, "rb") as train_lbls:
         magic_num, train_num = struct.unpack(">ii", train_lbls.read(8))
@@ -26,7 +26,7 @@ def get_data():
     with open(ftest_images, "rb") as test_img:
         magic_num, test_num, rows, cols = struct.unpack(">iiii", test_img.read(16))
         testing_images = np.fromfile(test_img,
-                dtype=np.uint8).reshape(test_num, rows*cols,1)
+                dtype=np.uint8).reshape(test_num, rows, cols)
 
     with open(ftest_labels, "rb") as test_lbls:
         magic_num, test_num = struct.unpack(">ii", test_lbls.read(8))
