@@ -18,10 +18,6 @@ Code Structure:
     Model - Get Training Data, Define number of epochs and mini batch size,
             Set learning rate and regularization param for weight decay
     Update Network - Update params after each mini batch
-
-Issues: Convolution Operation taking too much time, Network not classifying correctly
-
-Note: Testing Data not accounted for until Training is accurate
 '''
 
 class Network:
