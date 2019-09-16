@@ -11,7 +11,9 @@ CNN Structure:
     Example: (6,24,24)->(6,12,12)->(864,1)->(100,1)->(10,1)->Softmax Output(10,1)
     
 Activation Function: Relu 
+
 Parameters updated after backpropagation: fc_weights/biases, kernel_weights/biases
+
 Code Structure:
     Create Network - Define input_dim (28), feature map size, num maps, sizes
         of fully_connected_layers (no need to include linearized pool layer)
